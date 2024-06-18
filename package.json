@@ -1,0 +1,32 @@
+{
+  "name": "ksg-test-task",
+  "version": "1.0.0",
+  "description": "The ultimate test task",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsc-watch -p tsconfig.json --onSuccess \"node ./dist\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/caching": "^8.3.0",
+    "@fastify/postgres": "^5.2.2",
+    "@fastify/redis": "^6.2.0",
+    "abstract-cache": "^1.0.1",
+    "abstract-cache-redis": "^2.0.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.0",
+    "ioredis": "^5.4.1",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "@types/pg": "^8.11.6",
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.4.5"
+  }
+}
