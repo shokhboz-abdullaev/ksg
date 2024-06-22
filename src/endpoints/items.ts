@@ -60,7 +60,7 @@ export const fetchSkinPortItems = async (_app: typeof app) => {
         }),
       ]).catch(() => [{ data: undefined }, { data: undefined }]);
 
-      if (!tradable || !nonTradable) reject(new Error("RateLimit Exceeded"));
+      if (!tradable || !nonTradable || !nonTradable?.length || !tradable?.length) return reject(new Error("RateLimit Exceeded"));
 
       const nonTradableObject = toObjectBy(
         nonTradable!,
